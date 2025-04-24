@@ -1,0 +1,53 @@
+body {
+  background: black;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.login-container, .mensagem {
+  border: 2px solid #00ff00;
+  padding: 20px;
+  width: 320px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #111;
+  box-shadow: 0 0 20px #00ff00;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  background: black;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #00ff00;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#error {
+  color: red;
+  margin-top: 10px;
+}
+
+.mensagem h1 {
+  font-size: 24px;
+  white-space: pre-wrap;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  from { text-shadow: 0 0 5px #00ff00; }
+  to { text-shadow: 0 0 20px #00ff00; }
+}
