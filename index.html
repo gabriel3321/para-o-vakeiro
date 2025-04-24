@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login do Vakeiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container" id="login">
+    <h2>LOGIN - ÁREA RESTRITA</h2>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">ACESSAR</button>
+    <p id="error"></p>
+  </div>
+
+  <div class="mensagem" id="mensagem" style="display: none;">
+    <h1 id="typedText"></h1>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
