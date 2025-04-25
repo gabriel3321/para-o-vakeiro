@@ -1,36 +1,75 @@
-function login() {
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-
-  if (username === "Vakeiro" && password === "123456") {
-    document.getElementById("login").style.display = "none";
-    document.getElementById("mensagem").style.display = "block";
-
-    const mensagem = `
-    🎮 VAKEIRO LOGADO COM SUCESSO 🎮
-
-    Ele é streamer, é lenda, é o terror das ranqueadas!
-    Carisma de sobra, mira afiada, humildade no sangue.
-    Todo mundo respeita o VAKEIRO 💚
-    
-    Se tá ao vivo, para tudo e assiste — o entretenimento é garantido.
-    Esse é o VAKEIRO: talento puro, zoeira controlada, e coração gigante.
-    
-    #RESPEITAOHOMEM
-    `;
-    
-    typeText(mensagem);
-  } else {
-    document.getElementById("error").innerText = "Usuário ou senha incorretos!";
-  }
+body {
+  background: black;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0;
 }
 
-function typeText(text) {
-  const el = document.getElementById("typedText");
-  let i = 0;
-  const interval = setInterval(() => {
-    el.innerHTML += text.charAt(i);
-    i++;
-    if (i >= text.length) clearInterval(interval);
-  }, 40);
+.login-container, .mensagem {
+  border: 2px solid #00ff00;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #111;
+  box-shadow: 0 0 20px #00ff00;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  background: black;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 30px;
+  background: #00ff00;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  box-shadow: 0 0 10px #00ff00;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#error {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.mensagem h1 {
+  font-size: 18px;
+  white-space: pre-wrap;
+  animation: blink 1s infinite alternate;
+  margin: 0;
+  padding: 0 10px;
+  text-align: left;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+@keyframes blink {
+  from { text-shadow: 0 0 5px #00ff00; }
+  to { text-shadow: 0 0 20px #00ff00; }
 }
