@@ -5,7 +5,21 @@ function login() {
   if (username === "Vakeiro" && password === "123456") {
     document.getElementById("login").style.display = "none";
     document.getElementById("mensagem").style.display = "block";
-    typeText("O Vakeiro é viado e todo mundo sabe 😎");
+
+    const mensagem = `
+    🎮 VAKEIRO LOGADO COM SUCESSO 🎮
+
+    Ele é streamer, é lenda, é o terror das ranqueadas!
+    Carisma de sobra, mira afiada, humildade no sangue.
+    Todo mundo respeita o VAKEIRO 💚
+    
+    Se tá ao vivo, para tudo e assiste — o entretenimento é garantido.
+    Esse é o VAKEIRO: talento puro, zoeira controlada, e coração gigante.
+    
+    #RESPEITAOHOMEM
+    `;
+    
+    typeText(mensagem);
   } else {
     document.getElementById("error").innerText = "Usuário ou senha incorretos!";
   }
@@ -18,5 +32,5 @@ function typeText(text) {
     el.innerHTML += text.charAt(i);
     i++;
     if (i >= text.length) clearInterval(interval);
-  }, 100);
+  }, 40);
 }
